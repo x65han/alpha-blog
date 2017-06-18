@@ -1,5 +1,5 @@
 <h1 style="margin-bottom:30px">Blog posts</h1>
-<% if @posts %>
+<% if @posts.length < 1 %>
     <hr style="border-color:black">
     <div style="text-align:center">
         <%= link_to "Create Post" , new_post_path, :class => "btn btn-lg btn-primary" %>
