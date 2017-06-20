@@ -1,8 +1,9 @@
 <h3>Comments</h3>
 <% @post.comments.each do |comment| %>
-    <div class="well">
+    <div class="well" style="padding:9px 10px 0px 10px">
         <p>
-            <%= link_to '[X]', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'X', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' }, :style => "color:red" %>
+            &emsp;
             <strong><%=comment.username %></strong>: <%= comment.body%>
         </p>
     </div>

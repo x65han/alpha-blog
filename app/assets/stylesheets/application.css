@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ * {
+    transition: all 200ms ease-out;
+ }
+
+.icon {
+    font-weight: 900;
+    transform: scale(.7);
+    color: white !important;
+    background: gray;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+.icon:hover {
+    color: black !important;
+    background: transparent;
+}
