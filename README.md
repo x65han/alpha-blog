@@ -1,24 +1,8 @@
-# README
+# Blog Web App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+made with `Ruby on Rails` 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- allow user to create, read, update & destroy articles
+- organize articles into different categories
+- allow admin to add/remove users
+- allow user to sign up with e-mail
