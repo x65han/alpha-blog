@@ -6,10 +6,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' %>
+    <%= javascript_include_tag 'http://code.jquery.com/jquery.min.js' %>
+    -->
   </head>
 
   <body>
-    <%= render 'layouts/messages'%>
-    <%= yield %>
+    <div class="container">
+      <%= render 'layouts/messages'%>
+      <%= yield %>
+    </div>
   </body>
 </html>
