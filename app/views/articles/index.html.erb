@@ -1,1 +1,12 @@
-all articles
+<%= link_to "Create New Article", new_article_path %>
+<%= @articles.each do |article| %>
+    <h1>
+        <%= article.title %>
+    </h1>
+    <h1>
+        <%= article.description %>
+    </h1>
+    <%= link_to "View", article_path(article)%>
+    <%= link_to "Edit", edit_article_path(article) %>
+    <hr />
+<% end %>

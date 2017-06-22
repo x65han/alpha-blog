@@ -1578,3 +1578,268 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-22 11:14:17 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 281ms (Views: 273.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-22 11:14:25 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-22 11:17:43 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-22 11:18:17 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (101.9ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `show_article_path' for #<#<Class:0x007ff34de53cb8>:0x007ff3507ef478>):
+     5:     <h1>
+     6:         <%= article.description %>
+     7:     </h1>
+     8:     <%= link_to "View", show_article_path(article)%>
+     9:     <hr />
+    10: <% end %>
+  
+app/views/articles/index.html.erb:8:in `block in _app_views_articles_index_html_erb___1897630782583228462_70341501969780'
+app/views/articles/index.html.erb:1:in `_app_views_articles_index_html_erb___1897630782583228462_70341501969780'
+Started GET "/articles" for 127.0.0.1 at 2017-06-22 11:18:56 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-06-22 11:18:58 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-06-22 11:21:13 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 16.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles.1" for 127.0.0.1 at 2017-06-22 11:21:15 -0400
+Processing by ArticlesController#index as 
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-06-22 11:24:20 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2017-06-22 11:24:21 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/1" for 127.0.0.1 at 2017-06-22 11:24:22 -0400
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4KdXq7FCodhUy1t53wUbJyA7cEXijS2bakaVq1M1XUHzaebJdGj223g7NbnWMmSiPUYwD4ALG95OXySEGphCsQ==", "article"=>{"title"=>"First Article ever", "description"=>"I am not going to say too much in my first artlcle"}, "commit"=>"Update", "id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-06-22 11:24:22 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2017-06-22 11:25:47 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (78.6ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `show_article_path' for #<#<Class:0x007ff34dda9830>:0x007ff35071d798>):
+    1: <%= link_to "Create New Article", show_article_path %>
+    2: <%= @articles.each do |article| %>
+    3:     <h1>
+    4:         <%= article.title %>
+  
+app/views/articles/index.html.erb:1:in `_app_views_articles_index_html_erb___1897630782583228462_70341501712560'
+Started GET "/articles/" for 127.0.0.1 at 2017-06-22 11:26:01 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-06-22 11:26:03 -0400
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2017-06-22 11:26:34 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2017-06-22 11:27:05 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2017-06-22 11:27:07 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-06-22 11:27:08 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2017-06-22 11:27:12 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-06-22 11:27:54 -0400
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-22 11:27:55 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-06-22 11:28:05 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-06-22 11:28:16 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-22 11:28:17 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2017-06-22 11:28:19 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2017-06-22 11:28:29 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-22 11:28:31 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-06-22 11:28:34 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
