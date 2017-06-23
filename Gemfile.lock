@@ -41,7 +41,12 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (8.0.0)
+    autoprefixer-rails (7.1.1.2)
+      execjs
     bindex (0.5.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
     capybara (2.14.3)
@@ -176,6 +181,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3.6)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -185,7 +191,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.1)
   rails_12factor
-  sass-rails (~> 5.0)
+  sass-rails (>= 3.2)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -196,4 +202,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.1
+   1.13.6
