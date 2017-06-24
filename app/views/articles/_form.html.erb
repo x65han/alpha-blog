@@ -21,13 +21,11 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <%= f.submit "Submit", class: "btn btn-primary" %>
+                    <%= f.submit "Submit", class: "btn btn-xs btn-success" %>
+                    &emsp;
+                    <%= link_to "Back to Articles", articles_path, class: "btn btn-xs btn-primary-outline" %>
                 </div>
             </div>
         <% end %>
     </div>
-</div>
-
-<div align="center" class="col-xs-4 col-xs-offset-4">
-    <%= link_to "Back to Articles", articles_path %>
 </div>
