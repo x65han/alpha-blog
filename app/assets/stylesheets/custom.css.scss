@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 * {
-    transition: all 200ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 #logo {
@@ -80,79 +80,4 @@ footer {
     border-top: 1px solid black;
     color: black;
     text-align: center;
-}
-
-// buttons
-.btn {
-    font-weight: bold;
-}
-
-.bubble {
-    border-radius: 50px;
-    padding: 5px 20px;
-}
-
-.btn-primary-outline {
-    $theme: #337ab7;
-    border: 2px solid $theme;
-    color: $theme;
-    &.btn-primary-outline:hover {
-        color: white;
-        background-color: $theme;
-    }
-}
-
-.btn-success-outline {
-    $theme: #5cb85c;
-    border: 2px solid $theme;
-    color: $theme;
-    background-color: white;
-    &.btn-success-outline:hover {
-        color: white;
-        background-color: $theme;
-    }
-}
-
-.btn-danger-outline {
-    $theme: #d9534f;
-    border: 2px solid $theme;
-    color: $theme;
-    &.btn-danger-outline:hover {
-        color: white;
-        background-color: $theme;
-    }
-}
-
-.btn-dark-outline {
-    $theme: black;
-    border: 2px solid $theme;
-    color: $theme;
-    &.btn-dark-outline:hover {
-        color: white;
-        background-color: $theme;
-    }
-}
-
-.btn-success {
-    $theme: #5cb85c;
-    color: white;
-    border: 2px solid $theme;
-    background-color: $theme;
-    &.btn-success:hover {
-        color: $theme;
-        border: 2px solid $theme;
-        background-color: transparent;
-    }
-}
-
-.btn-dark {
-    $theme: black;
-    color: white;
-    background-color: $theme;
-    border: 2px solid $theme;
-    &.btn-dark:hover {
-        color: $theme;
-        border: 2px solid $theme;
-        background-color: transparent;
-    }
 }
