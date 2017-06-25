@@ -4,6 +4,12 @@
     font-weight: bold;
 }
 
+.attention {
+    &.attention:hover {
+        transform: scale(1.2);
+    }
+}
+
 .bubble {
     border-radius: 999px !important;
     padding: 5px 20px;
@@ -59,7 +65,6 @@
     $theme: #5cb85c;
     border: 2px solid $theme !important;
     color: $theme;
-    background-color: white;
     &.btn-success-outline:hover {
         color: white;
         background-color: $theme;
