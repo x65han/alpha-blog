@@ -89,23 +89,21 @@
 .btn-success {
     $theme: #5cb85c;
     color: white;
-    border: 2px solid $theme;
-    background-color: $theme;
+    border: 2px solid $theme !important;
+    background-color: $theme !important;
     &.btn-success:hover {
         color: $theme;
-        border: 2px solid $theme;
-        background-color: transparent;
+        background-color: transparent !important;
     }
 }
 
 .btn-dark {
     $theme: black;
     color: white;
-    background-color: $theme;
+    background-color: $theme !important;
     border: 2px solid $theme !important;
     &.btn-dark:hover {
         color: $theme;
-        border: 2px solid $theme;
-        background-color: transparent;
+        background-color: transparent !important;
     }
 }
