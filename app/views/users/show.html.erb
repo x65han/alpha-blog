@@ -11,4 +11,7 @@
         <h4><%= @user.username %>'s articles</h4>
     </div>
 </div>
-<%= render 'articles/articles', obj: @user.articles.reverse %>
+
+<% @user.articles.reverse.each do |article| %>
+    <%= render 'articles/article', obj: article %>
+<% end %>

@@ -1,4 +1,4 @@
-<% if params[:id] %>
+<% if params[:action] == "show" && params[:controller] == "articles" %>
     <h2 align="center"><%= obj.title %></h1>
 <% end %>
 
@@ -13,7 +13,7 @@
             </div>
             <div class="article-actions row">
                 <div class="col-xs-12">
-                    <% if params[:action] == "show" %>
+                    <% if params[:action] == "show" && params[:controller] == "articles" %>
                         <%= link_to "Edit this article", edit_article_path(obj),class: "btn btn-xs btn-primary-outline" %>
                         <%= link_to "View all articles", articles_path, class: "btn btn-xs btn-success-outline" %>
                         <%= link_to 'Delete', article_path(obj), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger-outline" %>
