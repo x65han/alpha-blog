@@ -1,0 +1,39 @@
+<% if params[:id] %>
+    <h2 align="center"><%= obj.title %></h1>
+<% end %>
+
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <div class="well well-lg" style="padding-top:10px;padding-bottom:5px">
+            <div class="article-title">
+                <%= link_to obj.title, article_path(obj) %>
+            </div>
+            <div class="article-body">
+                <%= truncate(obj.description, length: 100) %>
+            </div>
+            <div class="article-actions row">
+                <div class="col-xs-12">
+                    <% if params[:action] == "show" %>
+                        <%= link_to "Edit this article", edit_article_path(obj),class: "btn btn-xs btn-primary-outline" %>
+                        <%= link_to "View all articles", articles_path, class: "btn btn-xs btn-success-outline" %>
+                        <%= link_to 'Delete', article_path(obj), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger-outline" %>
+                    <% end %>
+                    <% if params[:action] != "show" %>
+                        <%= link_to "Show this article", article_path(obj),class: "btn btn-xs btn-primary-outline" %>
+                        <%= link_to 'Delete', article_path(obj), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger-outline" %>
+                    <% end %>
+                </div>
+                <div class="col-xs-12">
+                    <small style="float:right"><%= time_ago_in_words(obj.created_at)%> ago by 
+                        <% if (params[:action] == "show" && params[:controller] == "users" && params[:id] == obj.user.id.to_s) %>
+                            <span class="bubble bubble-dark"><%= obj.user.username %></span>
+                        <% end %>
+                        <% if !(params[:action] == "show" && params[:controller] == "users" && params[:id] == obj.user.id.to_s) %>
+                            <%= link_to obj.user.username, user_path(obj.user), class: "bubble bubble-dark interactive" %>
+                        <% end %>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

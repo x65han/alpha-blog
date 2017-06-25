@@ -4,26 +4,6 @@
     </div>
 </div>
 
-<% @articles.each do |article| %>
-    <div class="row">
-        <div class="col-xs-8 col-xs-offset-2">
-            <div class="well well-lg" style="padding-top:10px;padding-bottom:5px">
-                <div class="article-title">
-                    <%= link_to article.title, article_path(article) %>
-                </div>
-                <div class="article-body">
-                    <%= truncate(article.description, length: 100) %>
-                </div>
-                <div class="article-actions row">
-                    <div class="col-xs-12">
-                        <%= link_to "Show this article", article_path(article),class: "btn btn-xs btn-primary-outline" %>
-                        <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger-outline" %>
-                    </div>
-                    <div class="col-xs-12">
-                        <small style="float:right"><%= time_ago_in_words(article.created_at)%> ago by <span class="bubble-dark"><%= article.user.username if article.user %></span></small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<% @articles.reverse.each do |article| %>
+    <%= render 'article', obj: article %>
 <% end %>
