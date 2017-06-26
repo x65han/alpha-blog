@@ -13,13 +13,8 @@
             </div>
             <div class="article-actions row">
                 <div class="col-xs-12">
-                    <% if params[:action] == "show" && params[:controller] == "articles" %>
-                        <%= link_to "Edit this article", edit_article_path(obj),class: "btn btn-xs btn-primary-outline" %>
-                        <%= link_to "View all articles", articles_path, class: "btn btn-xs btn-success-outline" %>
-                        <%= link_to 'Delete', article_path(obj), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger-outline" %>
-                    <% end %>
-                    <% if params[:action] != "show" %>
-                        <%= link_to "Show this article", article_path(obj),class: "btn btn-xs btn-primary-outline" %>
+                    <%= link_to "Read More", article_path(obj),class: "btn btn-xs btn-primary-outline" %>
+                    <% if logged_in? && current_user == obj.user %>
                         <%= link_to 'Delete', article_path(obj), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger-outline" %>
                     <% end %>
                 </div>
