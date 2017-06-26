@@ -24,14 +24,7 @@
                     <% end %>
                 </div>
                 <div class="col-xs-12">
-                    <small style="float:right"><%= time_ago_in_words(obj.created_at)%> ago by 
-                        <% if (params[:action] == "show" && params[:controller] == "users" && params[:id] == obj.user.id.to_s) %>
-                            <span class="bubble bubble-dark"><%= obj.user.username %></span>
-                        <% end %>
-                        <% if !(params[:action] == "show" && params[:controller] == "users" && params[:id] == obj.user.id.to_s) %>
-                            <%= link_to obj.user.username, user_path(obj.user), class: "bubble bubble-dark interactive" %>
-                        <% end %>
-                    </small>
+                    <%= render 'shared/author', obj: obj %>
                 </div>
             </div>
         </div>

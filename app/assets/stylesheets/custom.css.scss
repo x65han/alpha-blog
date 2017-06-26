@@ -82,31 +82,19 @@ footer {
     text-align: center;
 }
 
-// .pagination {
-//     margin-top: 10px;
-//     margin-bottom: 10px;
-// }
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-// ul.pagination {
-//     li.active > a, li.active > a:hover {
-//         background: black;
-//     }
-//     li.previous_page {
-//         a {
-//             border-top-left-radius: 900px !important;
-//             border-bottom-left-radius: 900px !important;
-//         }
-//     }
-//     li.next_page {
-//         a {
-//             border-top-right-radius: 900px !important;
-//             border-bottom-right-radius: 900px !important;
-//         }
-//     }
-//     a {
-//         height: 20px;
-//         padding-top: 0px;
-//         line-height: 20px;
-//         border: 1px solid black !important;
-//     }
-// }
+ul.pagination {
+    li.active > a, li.active > a:hover {
+        background: black;
+    }
+    a {
+        height: 22px;
+        padding-top: 0px;
+        line-height: 20px;
+        border: 1px solid black !important;
+    }
+}

@@ -4,10 +4,8 @@
     </div>
 </div>
 
-<div align="center"><%= will_paginate @articles %></div>
-
-<% @articles.each do |article| %>
-    <%= render 'article', obj: article %>
-<% end %>
-
-<div align="center"><%= will_paginate @articles %></div>
+<%= render 'shared/pagination' %>
+    <% @articles.each do |article| %>
+        <%= render 'article', obj: article %>
+    <% end %>
+<%= render 'shared/pagination' %>
