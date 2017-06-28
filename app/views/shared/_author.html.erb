@@ -1,8 +1,16 @@
 <small style="float:right"><%= time_ago_in_words(obj.created_at)%> ago by 
     <% if (params[:action] == "show" && params[:controller] == "users" && params[:id] == obj.user.id.to_s) %>
-        <span class="bubble bubble-dark"><%= obj.user.username %></span>
+        <% if logged_in? && current_user == obj.user %>
+            <span class="bubble bubble-dark">you</span>
+        <% else %>
+            <span class="bubble bubble-dark"><%= obj.user.username %></span>
+        <% end %>
     <% end %>
     <% if !(params[:action] == "show" && params[:controller] == "users" && params[:id] == obj.user.id.to_s) %>
-        <%= link_to obj.user.username, user_path(obj.user), class: "bubble bubble-dark interactive" %>
+        <% if logged_in? && current_user == obj.user %>
+            <%= link_to obj.user.username, user_path(obj.user), class: "bubble bubble-wide btn-dark interactive" %>
+        <% else %>
+            <%= link_to obj.user.username, user_path(obj.user), class: "bubble bubble-wide btn-dark-outline" %>
+        <% end %>
     <% end %>
 </small>
