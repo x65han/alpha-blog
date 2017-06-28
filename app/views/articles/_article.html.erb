@@ -14,7 +14,7 @@
             <div class="article-actions row">
                 <div class="col-xs-12">
                     <%= link_to "Read More", article_path(obj),class: "btn btn-xs btn-success-outline" %>
-                    <% if logged_in? && current_user == obj.user %>
+                    <% if logged_in? && (current_user == obj.user || current_user.admin?) %>
                         <%= link_to 'Delete', article_path(obj), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-xs btn-danger-outline" %>
                     <% end %>
                 </div>
