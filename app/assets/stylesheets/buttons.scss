@@ -113,7 +113,7 @@
 .btn-danger-outline {
     $theme: #d9534f;
     border: 2px solid $theme !important;
-    color: $theme;
+    color: $theme !important;
     &.btn-danger-outline:hover {
         color: white;
         background-color: $theme;
@@ -153,6 +153,17 @@
 
 .btn-dark {
     $theme: black;
+    color: white;
+    background-color: $theme !important;
+    border: 2px solid $theme !important;
+    &.btn-dark:hover {
+        color: $theme;
+        background-color: transparent !important;
+    }
+}
+
+.btn-danger {
+    $theme: #d9534f;
     color: white;
     background-color: $theme !important;
     border: 2px solid $theme !important;
