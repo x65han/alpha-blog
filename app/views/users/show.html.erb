@@ -15,9 +15,17 @@
                 <%= link_to "Create New Article", new_article_path, class: "bubble btn btn-success-outline btn-xs" %>
             <% else %>
                 <span>Looks like <%= @user.username %> has no articles</span>
+                <% if logged_in? and current_user.admin? %>
+                    &emsp;|&emsp;<%= link_to "Delete this User", method: :delete, data: {confirm: "Are you sure you want to delete the user and all associated articles?"}, class: "bubble btn btn-danger-outline btn-xs" %>
+                <% end %>
             <% end %>
         <% else %>
-            <h4><%= @user.username %>'s articles</h4>
+            <h4>
+                <%= @user.username %>'s articles
+                <% if logged_in? and current_user.admin? %>
+                    &emsp;|&emsp;<%= link_to "Delete this User", new_article_path, class: "bubble btn btn-danger-outline btn-xs" %>
+                <% end %>
+            </h4>
         <% end %>
     </div>
 </div>
